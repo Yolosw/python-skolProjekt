@@ -1,7 +1,7 @@
 import math
 
 def inputs():
-    var1 = float(input("Första nummret: "))
+    var1 = float(input("Nummer: "))
     return var1
 
 def circleArea(r):
@@ -23,9 +23,12 @@ def hypokater(k1, hypo):
 val = int(input("\n 1. Cirkel Area,\n 2. Rektangel Area\n 3. Kvadrat Area \n 4.Pythogoras sats \n Svar: "))
 enhet = input("Enhet: ")
 # Välja mellan 4 olika val
+
+# Man kan använda if också men match är snabbare kolla längre ner så ser du if satsen lösningen.
 match(val):
     case 1:
-        var1 = float(input("Radien på circkeln: "))
+        print("skriv in radien på cirkeln")
+        var1 = inputs()
         print(circleArea(var1), enhet)
     case 2:
         var1, var2 = inputs(), inputs()
@@ -47,23 +50,17 @@ match(val):
 
 """"
 Så här gör du utan match men match är ett bättre val för den är 86% snabbare enligt vissa källor.
-
 if val == 1:
     var1 = float(input("Radien på circkeln: "))
-  
     print(circleArea(var1), enhet)
 elif val == 2:
     var1, var2 = inputs(), inputs()
-    
     print(area(var1, var2), enhet)
 elif val == 3:
     var1 = inputs()
-    
     print(area(var1, var1), enhet)
 elif val == 4:
     val2 = int(input("1. båda kateter \n 2. Bara 1 katet: "))
-  
-
     if val2 == 1:
         var1, var2 = inputs(), inputs()
         print(kateter(var1, var2))
