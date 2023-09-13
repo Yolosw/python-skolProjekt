@@ -23,6 +23,31 @@ def hypokater(k1, hypo):
 val = int(input("\n 1. Cirkel Area,\n 2. Rektangel Area\n 3. Kvadrat Area \n 4.Pythogoras sats \n Svar: "))
 enhet = input("Enhet: ")
 # Välja mellan 4 olika val
+match(val):
+    case 1:
+        var1 = float(input("Radien på circkeln: "))
+        print(circleArea(var1), enhet)
+    case 2:
+        var1, var2 = inputs(), inputs()
+        print(area(var1, var2), enhet)
+    case 3:
+        var1 = inputs()
+        print(area(var1, var1), enhet)
+    case 4:
+        val2 = int(input("\n 1. båda kateter \n 2. Bara 1 katet: "))
+        match(val2):
+            case 1:
+                var1, var2 = inputs(), inputs()
+                print(kateter(var1, var2))
+            case 2:
+                var1, var2 = inputs(), inputs()
+                print(hypokater(var1, var2), enhet)
+
+
+
+""""
+Så här gör du utan match men match är ett bättre val för den är 86% snabbare enligt vissa källor.
+
 if val == 1:
     var1 = float(input("Radien på circkeln: "))
   
@@ -48,3 +73,5 @@ elif val == 4:
         print(hypokater(var1, var2), enhet)
 else:
     print("Felaktigt val")
+
+"""""
