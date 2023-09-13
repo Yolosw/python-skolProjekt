@@ -1,2 +1,2 @@
 # python-schoolProjects
-Basically the things we did in school.
+Saker vi har gjort i skolan.
