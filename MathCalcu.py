@@ -12,7 +12,7 @@ def hypokater(k1, hypo):
     return k2
 
 
-val = int(input("\n 1. Cirkel Area,\n 2. Rektangel Area\n 3. Kvadrat Area \n 4.Pythogoras sats \n Svar:"))
+val = int(input("\n 1. Cirkel Area,\n 2. Rektangel Area\n 3. Kvadrat Area \n 4.Pythogoras sats \n Svar: "))
 enhet = str(input("Enhet: "))
 if val == 1:
     var1 = float(input("Radien på circkeln: "))
